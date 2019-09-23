@@ -1,0 +1,85 @@
+body 
+{
+	margin: 0;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+/* All top navigation related, including responsive navigation from bar to hamburger menu*/
+.topnav 
+{
+	overflow: hidden;
+	background-color: #223031;
+}
+
+.topnav a 
+{
+	float: left;
+	display: block;
+	color: #abb8be;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover 
+{
+	background-color: #7a99ab;
+	color: black;
+}
+
+.topnav a.active 
+{
+	background-color: #3e5000;
+	color: white;
+}
+
+.topnav .icon 
+{
+	display: none;
+}
+
+@media screen and (max-width: 600px) 
+{
+	.topnav a:not(:first-child) {display: none;}
+	.topnav a.icon 
+	{
+		float: right;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) 
+{
+	.topnav.responsive {position: relative;}
+	.topnav.responsive .icon 
+	{
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a 
+	{
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
+/* End of responsive navigation related CSS blocks*
+
+/* Scales top main image */
+.responsive-img 
+{
+	width: 100%;
+	height: auto;
+}
+
+.content
+{
+	padding: 20px;
+}
+
+hr
+{
+	border: 1px solid #223031;
+}

@@ -1,0 +1,5 @@
+Light blue: 7a99ab
+Dark blue grey: 223031
+Green: 3e5000
+Reddish Brown: 4b383c
+Lighter blue: abb8be

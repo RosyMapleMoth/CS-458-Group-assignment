@@ -8,7 +8,7 @@
     <link href=
         "http://nrs-projects.humboldt.edu/~st10/styles/normalize.css" type="text/css" rel="stylesheet" />
 
-    <link href="style.css" type="text/css"  rel="stylesheet" />
+    <link href="css/style.css" type="text/css"  rel="stylesheet" />
 	
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,21 +16,9 @@
 	<script src="nav.js"></script>
 	</head>
 
-	<body>
-
-	<div class="topnav" id="myTopnav">
-	  <a href="#home" class="active">Home</a>
-	  <a href="#news">News</a>
-	  <a href="#contact">Contact</a>
-	  <a href="#about">About</a>
-	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		<i class="fa fa-bars"></i>
-	  </a>
-	</div>
-	
-	<div>
-		<img src="img/humboldt.jpg" alt="Humboldt" class="responsive-img">
-	</div>
+<?php
+	require_once("header.html");
+?>
 
 	<div class="content">
 	Look at me, pretending to be a fancy designer with my Latin. 
@@ -39,10 +27,10 @@
 	</div>
 
 	<!-- Footer -->
-	<div class="footer">
-		<hr />
-		<center> I am the footer, and I foot things </center>
-	</div>
+
+<?php
+	require_once("footer.html");
+?>
 
 	<script>
 		function myFunction() {
@@ -54,6 +42,5 @@
 		  }
 		}
 	</script>
-
 	</body>
 </html>
