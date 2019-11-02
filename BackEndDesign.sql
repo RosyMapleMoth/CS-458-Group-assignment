@@ -8,6 +8,7 @@ DROP TABLE Biz_prof CASCADE CONSTRAINTS;
 
 CREATE TABLE Biz_prof
 ( biz_id integer,
+  name varchar2(25),
   street_add varchar2(25),
   city varchar2(20),
   state char(2),

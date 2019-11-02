@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
-		<title> Travel Humboldt </title>
+		<title> Find Your Humboldt </title>
 		<meta charset="utf-8" />
 			
 		<link href="css/normalize.css" type="text/css" rel="stylesheet" />
@@ -18,9 +18,7 @@
 ?>
 
 	<div id="content" class="content">
-		<!-- Content div is controlled by jQuery, and will load PHP files based on the what the user click -->
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/nav.js"></script>
+		This is the main index page. Neat!
 	</div>
 
 	<!-- Footer -->

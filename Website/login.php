@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
-		<title> Find Your Humboldt - Search Around</title>
+		<title> Find Your Humboldt - Login</title>
 		<meta charset="utf-8" />
 			
 		<link href="css/normalize.css" type="text/css" rel="stylesheet" />
@@ -18,7 +18,9 @@
 ?>
 
 	<div id="content" class="content">
-		Search!
+		<a href="owner"> Business Owner Login </a>
+		<br /> <br />
+		<a href="admin" id="admin"> Admin Login </a>
 	</div>
 
 	<!-- Footer -->
@@ -39,3 +41,4 @@
 	</script>
 	</body>
 </html>
+
