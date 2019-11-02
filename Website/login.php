@@ -18,9 +18,9 @@
 ?>
 
 	<div id="content" class="content">
-		<a href="owner"> Business Owner Login </a>
+		<a href="owner.php"> Business Owner Login </a>
 		<br /> <br />
-		<a href="admin" id="admin"> Admin Login </a>
+		<a href="admin.php"> Admin Login </a>
 	</div>
 
 	<!-- Footer -->
