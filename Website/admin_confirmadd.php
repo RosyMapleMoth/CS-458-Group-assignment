@@ -20,29 +20,31 @@ function admin_confirmadd()
 
 	// Connection successful
 	// Setup calling of procedure
-	$new_event_call = 'begin insert_new_event(:new_eventname, :new_eventdate,
-											  :new_eventloc, :new_usr_time,
-											  :new_eventtype, :new_relatedart,
-											  :new_relatedartist); end;';
+	$new_event_call = 'begin insert_new_biz(:new_name, :new_street_add,
+											:new_city, :new_state,
+											:new_type, :new_active,
+											:new_phone,:new_liaison); end;';
 	$new_event_stmt = oci_parse($conn, $new_event_call);
 	
 	// Setup variables
-	$eventname_in = strip_tags($_POST['eventname']);
-	$eventdate_in = strip_tags($_POST['eventday']) . '-' . strip_tags($_POST['eventmon']) . '-' . strip_tags($_POST['eventyear']);
-	$usr_time_in = strip_tags($_POST['hour']) . strip_tags($_POST['minute']);
-	$eventloc_in = strip_tags($_POST['eventloc']);
-	$eventtype_in = strip_tags($_POST['eventtype']);
-	$relatedart_in = strip_tags($_POST['relatedart']);
-	$relatedartist_in = strip_tags($_POST['relatedartist']);
+	$name_in = strip_tags($_POST['name']);
+	$street_add_in = strip_tags($_POST['street_add']);
+	$city_in = strip_tags($_POST['city']);
+	$state_in = strip_tags($_POST['state']);
+	$type_in = strip_tags($_POST['type']);
+	$active_in = 'Y';
+	$phone_in = strip_tags($_POST['phone']);
+	$liaison_in = strip_tags($_POST['liaison']);
 	
 	// Setup binds
-	oci_bind_by_name($new_event_stmt, ":new_eventname", $eventname_in);
-	oci_bind_by_name($new_event_stmt, ":new_eventdate", $eventdate_in);
-	oci_bind_by_name($new_event_stmt, ":new_usr_time", $usr_time_in);
-	oci_bind_by_name($new_event_stmt, ":new_eventloc", $eventloc_in);
-	oci_bind_by_name($new_event_stmt, ":new_eventtype", $eventtype_in);
-	oci_bind_by_name($new_event_stmt, ":new_relatedart", $relatedart_in);
-	oci_bind_by_name($new_event_stmt, ":new_relatedartist", $relatedartist_in);
+	oci_bind_by_name($new_event_stmt, ":new_name", $name_in);
+	oci_bind_by_name($new_event_stmt, ":new_street_add", $street_add_in);
+	oci_bind_by_name($new_event_stmt, ":new_city", $city_in);
+	oci_bind_by_name($new_event_stmt, ":new_state", $state_in);
+	oci_bind_by_name($new_event_stmt, ":new_type", $type_in);
+	oci_bind_by_name($new_event_stmt, ":new_active", $active_in);
+	oci_bind_by_name($new_event_stmt, ":new_phone", $phone_in);
+	oci_bind_by_name($new_event_stmt, ":new_liaison", $liaison_in);
 	
 	// Execute and commit
 	oci_execute($new_event_stmt, OCI_DEFAULT);
@@ -55,24 +57,24 @@ function admin_confirmadd()
 		<fieldset>
 			<legend> Thank you for submitting! </legend>
 			<table>
-				<caption> Your event has been added.  </caption>
+				<caption> The new business has been added.  </caption>
 				<tr>
-					<th>Event Name </th>
-					<th>Date </th>
-					<th>Time </th>
-					<th>Location </th>
-					<th>Event type </th>
-					<th>Art</th>
-					<th>Artist</th>
+					<th>Business Name </th>
+					<th>Street Address </th>
+					<th>City </th>
+					<th>State </th>
+					<th>Type </th>
+					<th>Phone </th>
+					<th>Liaison </th>
 				</tr>
 				<tr>
-					<td> <?= $eventname_in ?></td>
-					<td><?= $eventdate_in ?></td>
-					<td><?= $usr_time_in ?> </td>
-					<td><?= $eventloc_in ?> </td>
-					<td><?= $eventtype_in ?> </td>
-					<td><?= $relatedart_in ?> </td>
-					<td><?= $relatedartist_in ?> </td>
+					<td> <?= $name_in ?></td>
+					<td><?= $street_add_in ?></td>
+					<td><?= $city_in ?> </td>
+					<td><?= $state_in ?> </td>
+					<td><?= $type_in ?> </td>
+					<td><?= $phone_in ?> </td>
+					<td><?= $liaison_in ?> </td>
 				</tr>
 			</table>
 			<input type="submit" name="return" value= "Return to selection page" />
