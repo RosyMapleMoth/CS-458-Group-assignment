@@ -1,0 +1,6 @@
+
+select *
+from ( select *
+from _tablename_
+order by dbms_random.value )
+where rownum <= 1;
