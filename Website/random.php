@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -15,10 +19,45 @@
 
 <?php
 	require_once("header.html");
+	require_once("random_opt.php");
+	require_once("random_return.php");
+	require_once("hsu_conn.php");
 ?>
 
 	<div id="content" class="content">
-		Random!
+	<?php
+			// No username exists, produce the initial choice form
+			if (! array_key_exists("step", $_SESSION) || (array_key_exists("choose_again", $_POST)))
+			{
+				random_opt();
+				$_SESSION['step'] = "random_return";
+			}      
+			// Login has succeeded, show a random thing based on previous step choice
+			elseif (($_SESSION['step'] == "random_return") || (array_key_exists("random", $_POST))) 
+			{
+				random_return();
+				$_SESSION['step'] = "random";
+			}
+
+			// User has clicked done
+			elseif(array_key_exists("logout", $_POST))
+			{
+				session_destroy();
+				?>
+				<h1> You have been logged out </h1>
+				<h2> <a href="https://nrs-projects.humboldt.edu/~mlg40/project/index.php"> Return </a> to the home page. </h2>
+				<?php
+			}
+			else // Should never happen, but just in case, session is restarted and login form is shown
+			{
+				session_destroy();
+				session_regenerate_id(TRUE);
+				session_start();
+			 
+				admin_login();
+				$_SESSION['step'] = "option";
+			}
+		?>
 	</div>
 
 	<!-- Footer -->
