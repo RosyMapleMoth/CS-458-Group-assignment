@@ -30,3 +30,12 @@ BEGIN
                   'Eureka','CA','Eatery','(707) 840-8004','unknown');  
 END; 
 /
+
+/*insert into Biz_prof
+	values
+	(666,'Arcata Scoop', '1068 I Street',
+                  'Arcata,','CA','Eatery','y','7078459230', null, null, '');
+*/
+/* insert into Biz_prof
+	values
+	(new_id, new_name, new_street_add, new_city, new_state, new_type, new_active, new_phone, null, null, new_liasion); */
