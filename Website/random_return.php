@@ -23,20 +23,20 @@ function random_return()
 		$username = $_SESSION["username"];
 		$password = $_SESSION["password"];
 		$choice = $_SESSION["choice"];
-		$case = "";
+		$random_query_str = "";
 	
 		switch ($choice) {
 			case "eatery":
-				$case = "Eatery";
+				$random_query_str = "select * from (select * from Eatery order by dbms_random.value) where rownum <= 1";
 				break;
 			case "event":
-				$case = "Event";
+				$random_query_str = "select * from (select * from Event order by dbms_random.value) where rownum <= 1";
 				break;
 			case "attract":
-				$case = "Attraction";
+				$random_query_str = "select * from (select * from Attraction order by dbms_random.value) where rownum <= 1";
 				break;
 			case "outdoor":
-				$case = "Outdoor_dest";
+				$random_query_str = "select * from (select * from Outdoor_dest order by dbms_random.value) where rownum <= 1";
 				break;
 		}
 	}
@@ -44,7 +44,6 @@ function random_return()
 	// Setup query
 	$conn = hsu_conn($username, $password);
 	
-	$random_query_str = "select * from (select * from movie order by dbms_random.value) where rownum <= 1";
 	$random_query = oci_parse($conn, $random_query_str);
 	oci_execute($random_query);
 
