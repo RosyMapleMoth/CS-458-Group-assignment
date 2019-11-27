@@ -47,7 +47,7 @@ CREATE TABLE Outdoor_dest
   city varchar2(20),
   state char(2),
   cost char(3),
-  description varchar2(75),
+  description varchar2(255),
   directions varchar2(75),
   primary key (out_id)
 );
@@ -56,7 +56,7 @@ DROP TABLE Eatery CASCADE CONSTRAINTS;
 
 CREATE TABLE Eatery
 ( eat_id integer,
-  description varchar2(75),
+  description varchar2(255),
   link varchar2(50),
   price char(3),
   delivery char(1),
@@ -78,7 +78,7 @@ CREATE TABLE Event
   alcohol char(1),
   food char(1),
   ticket_price varchar2(7),
-  description varchar2(75),
+  description varchar2(255),
   street_add varchar2(25),
   city varchar2(20),
   state char(2),
@@ -97,8 +97,8 @@ CREATE TABLE Attraction
   street_add varchar2(25),
   city varchar2(20),
   state char(2),
-  description varchar2(75),
+  description varchar2(255),
   biz_id integer,
-  primary key (att_type),
+  primary key (att_id),
   foreign key (biz_id) REFERENCES Biz_prof
 );
