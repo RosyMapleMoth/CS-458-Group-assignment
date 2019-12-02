@@ -1,5 +1,5 @@
 <?php
-    session_start();
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +29,9 @@
 			// No username exists, produce the initial choice form
 			if (! array_key_exists("step", $_SESSION) || (array_key_exists("choose_again", $_POST)))
 			{
+				session_destroy();
+				session_start();
+				session_regenerate_id(TRUE);
 				random_opt();
 				$_SESSION['step'] = "random_return";
 			}      
@@ -54,8 +57,8 @@
 				session_regenerate_id(TRUE);
 				session_start();
 			 
-				admin_login();
-				$_SESSION['step'] = "option";
+				random_opt();
+				$_SESSION['step'] = "random_return";
 			}
 		?>
 	</div>

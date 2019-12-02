@@ -1,9 +1,4 @@
 <?php
-
-/*
-	
-*/
-
 function random_opt()
 {
 	
@@ -34,4 +29,3 @@ function random_opt()
 	<?php
 }
 ?>
-

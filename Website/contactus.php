@@ -30,7 +30,7 @@ grecaptcha.ready(function() {
 				
 			<div id="form">
 				<fieldset>
-					<legend> Event Information </legend>
+					<legend> Talk to Us </legend>
 						<label>Name:
 							<input type="text" name="name" required="required" maxlength="25" size="25" />
 						</label>
