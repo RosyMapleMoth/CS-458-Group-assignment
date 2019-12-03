@@ -18,6 +18,8 @@
 	   require_once("admin_start.php");
 	   require_once("admin_addbiz.php");
 	   require_once("admin_confirmadd.php");
+	   require_once("admin_addsurvey.php");
+	   require_once("admin_confirmadd_survey.php");
 	   require_once("admin_returnbiz.php");
     ?>
 
@@ -56,10 +58,22 @@
 			admin_addbiz();
 			$_SESSION['step'] = "confirmadd";
 		}
+		//Admin wants to add a new survey from the contact form
+		elseif ((array_key_exists("addsurvey", $_POST)) && ($_SESSION['step'] = "pick")) 
+		{
+			admin_addsurvey();
+			$_SESSION['step'] = "confirmadd_survey";
+		}
 		//Confirmation page. Let's the admin know that the business was added without issue, and shows the information they added.
 		elseif ((array_key_exists("confirmadd", $_POST))  && ($_SESSION['step'] = "confirmadd")) 
 		{
 			admin_confirmadd();
+			$_SESSION['step'] = "check";
+		}
+		//Confirmation page. Let's the admin know that the survey was added without issue, and shows the information they added.
+		elseif ((array_key_exists("confirmadd_survey", $_POST))  && ($_SESSION['step'] = "confirmadd_survey")) 
+		{
+			admin_confirmadd_survey();
 			$_SESSION['step'] = "check";
 		}
 		// Admin wants to pull all businesses from DB

@@ -35,6 +35,8 @@ function admin_start()
 			<input type="submit" name="addbiz" value="Add new business" />
 			
 			<input type="submit" name="returnbiz" value="List Businesses" />
+			
+			<input type="submit" name="addsurvey" value="Add new survey" />
 		</fieldset>
 	</form>
 	
