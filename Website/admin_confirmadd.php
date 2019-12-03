@@ -49,33 +49,33 @@ function admin_confirmadd()
 	<br />
 	<form method="post" 
 		  action="<?= htmlentities($_SERVER['PHP_SELF'], ENT_QUOTES) ?>">			  
-		<fieldset>
-			<legend> Thank you for submitting! </legend>
-			<table>
-				<caption> The new business has been added.  </caption>
-				<tr>
-					<th>Business Name </th>
-					<th>Street Address </th>
-					<th>City </th>
-					<th>State </th>
-					<th>Type </th>
-					<th>Phone </th>
-					<th>Liaison </th>
-				</tr>
-				<tr>
-					<td> <?= $name_in ?></td>
-					<td><?= $street_add_in ?></td>
-					<td><?= $city_in ?> </td>
-					<td><?= $state_in ?> </td>
-					<td><?= $type_in ?> </td>
-					<td><?= $phone_in ?> </td>
-					<td><?= $liaison_in ?> </td>
-				</tr>
-			</table>
+			<fieldset>
+				<legend> Thank you for submitting! </legend>
+				<table>
+					<caption> The new business has been added.  </caption>
+					<tr>
+						<th>Business Name </th>
+						<th>Street Address </th>
+						<th>City </th>
+						<th>State </th>
+						<th>Type </th>
+						<th>Phone </th>
+						<th>Liaison </th>
+					</tr>
+					<tr>
+						<td> <?= $name_in ?></td>
+						<td><?= $street_add_in ?></td>
+						<td><?= $city_in ?> </td>
+						<td><?= $state_in ?> </td>
+						<td><?= $type_in ?> </td>
+						<td><?= $phone_in ?> </td>
+						<td><?= $liaison_in ?> </td>
+					</tr>
+				</table>
 			<!-- Admin can either return to the initial "start" page or to logout -->
+			</fieldset>
 			<input type="submit" name="return" value= "Return to selection page" />
-			<input type="submit" name="logout" value= "logout" />	
-		</fieldset>
+			<input type="submit" name="Logout" value= "logout" />	
 	</form>
 	<?php
 	

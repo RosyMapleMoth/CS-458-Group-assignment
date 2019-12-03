@@ -53,14 +53,15 @@ function random_return()
 				   The if is used to pick from the drop down from random_opt() and produce the result
 				   and the corresponding output in HTML */
 				if ($choice == "eatery") {
-						$current_name = oci_result($random_query, "EAT_ID");
+						$current_name = oci_result($random_query, "NAME");
 						$current_add = oci_result($random_query, "STREET_ADD");
 						$current_city = oci_result($random_query, "CITY");
 						$current_desc = oci_result($random_query, "DESCRIPTION");
 						$current_price = oci_result($random_query, "PRICE");
 						$current_link = oci_result($random_query, "LINK");
 						?>
-							You should eat at: <?= $current_name ?> !
+						<fieldset>
+							You should eat at: <?= $current_name ?>!
 							<br />
 							<?= $current_link ?>
 							<br />
@@ -69,10 +70,11 @@ function random_return()
 							<?= $current_add ?>, <?= $current_city ?>
 							<br />
 							<?= $current_price ?>
+						</fieldset>
 						<?php
 				}
 				elseif ($choice == "event") {
-						$current_name = oci_result($random_query, "EV_ID");
+						$current_name = oci_result($random_query, "NAME");
 						$current_type = oci_result($random_query, "EV_TYPE");
 						$current_add = oci_result($random_query, "STREET_ADD");
 						$current_city = oci_result($random_query, "CITY");
@@ -81,6 +83,7 @@ function random_return()
 						$current_alcohol = oci_result($random_query, "ALCOHOL");
 						$current_food = oci_result($random_query, "FOOD");
 						?>
+						<fieldset>
 							You should go to: <?= $current_name ?>! Which is a: <?= $current_type ?>.
 							<br />
 							<?= $current_desc ?>
@@ -90,16 +93,18 @@ function random_return()
 							It'll cost you <?= $current_price ?>.
 							<br />
 							Will it have food?: <?= $current_food ?> Will it have alcohol?: <?= $current_alcohol ?>
+						</fieldset>
 						<?php
 				}
 				elseif ($choice == "attract") {
-						$current_name = oci_result($random_query, "ATT_ID");
+						$current_name = oci_result($random_query, "NAME");
 						$current_type = oci_result($random_query, "ATT_TYPE");
 						$current_add = oci_result($random_query, "STREET_ADD");
 						$current_city = oci_result($random_query, "CITY");
 						$current_desc = oci_result($random_query, "DESCRIPTION");
 						$current_price = oci_result($random_query, "PRICE");
 						?>
+						<fieldset>
 							You should check out: <?= $current_name ?>! Which is a: <?= $current_type ?>.
 							<br />
 							<?= $current_desc ?>
@@ -108,10 +113,11 @@ function random_return()
 							<br />
 							It'll cost you <?= $current_price ?>.
 							<br />
+						</fieldset>
 						<?php
 				}
 				elseif ($choice == "outdoor"){
-						$current_name = oci_result($random_query, "OUT_ID");
+						$current_name = oci_result($random_query, "NAME");
 						$current_bath = oci_result($random_query, "BATHROOMS");
 						$current_dist = oci_result($random_query, "DISTANCE");
 						$current_diff = oci_result($random_query, "DIFFICULTY");
@@ -121,6 +127,7 @@ function random_return()
 						$current_desc = oci_result($random_query, "DESCRIPTION");
 						$current_dir = oci_result($random_query, "DIRECTIONS");
 						?>
+						<fieldset>
 							You should look at: <?= $current_name ?>! 
 							<br />
 							<?= $current_desc ?>
@@ -135,6 +142,7 @@ function random_return()
 							<br />
 							How difficult is it?: <?= $current_diff ?>. How far is it? <?= $current_dist ?>
 							<br />
+						</fieldset>
 						<?php
 				}
 				else {
@@ -147,14 +155,13 @@ function random_return()
 				?>
 				<?php
 		?>
+		
 		<form method="post" action="<?= htmlentities($_SERVER['PHP_SELF'], ENT_QUOTES) ?>">
-			<fieldset>
 				
 			<br />
 			<input type="submit" name="random" value="Another please!" /> <!-- Runs the select all over again -->
 			
 			<input type="submit" name="choose_again" value="Select something else" /> <!-- Goes back to random_opt() --> 
-			</fieldset>
 		</form>
 	
 	<?php

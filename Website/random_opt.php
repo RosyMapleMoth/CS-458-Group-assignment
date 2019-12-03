@@ -17,6 +17,7 @@ function random_opt()
 				<input type="password" name="password" 
 					   id="password" />
 			</fieldset>
+			<br />
 			<fieldset>
 				<label> What do you feel like?
 					<select name="choice">
@@ -27,8 +28,8 @@ function random_opt()
 						<option value="event">I feel like doing something</option>
 					</select>
 				</label>
-				<input type="submit" />
 			</fieldset>
+			<input type="submit" />
 		</form>
 	
 	<?php

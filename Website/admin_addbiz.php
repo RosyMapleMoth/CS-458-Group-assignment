@@ -18,22 +18,27 @@ function admin_addbiz()
 					<label> Business Name:
 						<input type="text" name="name" required="required" maxlength="25" size="25" />
 					</label>
+					<br /><br />
 					<label> Street address:
 					<input type="text" name="street_add" required="required" maxlength="25" size="25" />
 					</label>
+					<br /><br />
 					<label> City:
 					<input type="text" name="city" required="required" maxlength="20" size="20" />
 					</label>
+					<br /><br />
 					<label> State:
 					<input type="text" name="state" required="required" maxlength="2" size="2" />
 					</label>
-					<br/><br/>
+					<br/><br/><br />
 					<label> Type:
 						<input type="text" name="type" required="required" maxlength="20"/>
 					</label>
+					<br /><br />
 					<label> Phone:
 						<input type="text" name="phone" required="required" maxlength="20"/>
 					</label>
+					<br /><br />
 					<label> Liaison:
 						<input type="text" name="liaison" required="required" maxlength="20"/>
 					</label>
@@ -41,10 +46,8 @@ function admin_addbiz()
 			</fieldset>
 		</div>
 		<br />
-		<fieldset>
 			<input type="submit" name="confirmadd" value="Submit" />			
 			<input type="reset" value="Clear" />
-		</fieldset>
 	</form>	
 	<?php
 }

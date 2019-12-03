@@ -71,11 +71,9 @@ grecaptcha.ready(function() {
 			<div class="g-recaptcha" data-sitekey="6LfeNMQUAAAAAAq1ZRT5UBd9TskftWMX4Wvefjif"> <!-- Also required for Captcha -->
 			</div>      
 			<br/>
-			
-			<fieldset>
-				<input type="submit" value="Submit">
-				<input type="reset" value="Clear" />
-			</fieldset>
+
+			<input type="submit" value="Submit">
+			<input type="reset" value="Clear" />
 		</form>	
 	</div>
 
