@@ -1,3 +1,4 @@
+<!-- Builds the e-mailed form and also provides feedback to the user on whether or not it was submitted successfully -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 

@@ -18,7 +18,11 @@
 ?>
 
 	<div id="content" class="content">
-		This is the main index page. Neat!
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi blandit cursus risus. Eleifend quam adipiscing vitae proin. Sodales neque sodales ut etiam sit amet nisl purus. Arcu felis bibendum ut tristique et egestas quis. Quisque sagittis purus sit amet volutpat consequat mauris nunc congue. Turpis egestas pretium aenean pharetra. Nisi quis eleifend quam adipiscing vitae. Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Pellentesque eu tincidunt tortor aliquam nulla facilisi. In fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Posuere urna nec tincidunt praesent semper.
+
+		Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Eget mauris pharetra et ultrices neque. Ultrices dui sapien eget mi proin sed libero enim. Eleifend mi in nulla posuere sollicitudin aliquam ultrices. Nunc sed blandit libero volutpat sed cras ornare. Consequat ac felis donec et. Elementum facilisis leo vel fringilla est. Justo nec ultrices dui sapien eget. Interdum velit euismod in pellentesque massa. Netus et malesuada fames ac turpis egestas sed tempus. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus semper. Erat velit scelerisque in dictum non consectetur.
+
+		Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Amet risus nullam eget felis eget nunc lobortis. Ultrices dui sapien eget mi proin. Aenean sed adipiscing diam donec adipiscing tristique risus nec feugiat. Tellus id interdum velit laoreet id donec ultrices. Diam phasellus vestibulum lorem sed. Non pulvinar neque laoreet suspendisse interdum consectetur. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Quis eleifend quam adipiscing vitae proin. Sed adipiscing diam donec adipiscing. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Euismod nisi porta lorem mollis. Nisi est sit amet facilisis magna etiam. Enim nulla aliquet porttitor lacus. Morbi tempus iaculis urna id volutpat.
 	</div>
 
 	<!-- Footer -->

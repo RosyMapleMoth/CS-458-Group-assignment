@@ -1,4 +1,9 @@
 <?php
+/*
+Function: random_opt()
+Produces a drop down menu to grab the option the person wants
+Login form is only needed because Oracle. That's what I'm sticking with.
+*/
 function random_opt()
 {
 	

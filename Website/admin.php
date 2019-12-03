@@ -41,6 +41,7 @@
 		$_SESSION['step'] = "admin_start";
     }      
 	// Login has succeeded, shows the "start" page for admins
+	// This is basically showing the option to "add a business", "return current business" etc. 
     elseif (($_SESSION['step'] == "admin_start") || (array_key_exists("return", $_POST))) 
     {
 		admin_start();
@@ -53,12 +54,13 @@
 		admin_addbiz();
 		$_SESSION['step'] = "confirmadd";
 	}
+	//Confirmation page. Let's the admin know that the business was added without issue, and shows the information they added.
 	elseif ((array_key_exists("confirmadd", $_POST))  && ($_SESSION['step'] = "confirmadd")) 
 	{
 		admin_confirmadd();
 		$_SESSION['step'] = "check";
 	}
-	//Admin wants to pull all businesses from DB
+	/ /Admin wants to pull all businesses from DB
 	elseif ((array_key_exists("returnbiz", $_POST))  && ($_SESSION['step'] = "pick"))
 	{
 		admin_returnbiz();

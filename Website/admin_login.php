@@ -1,15 +1,9 @@
 <?php
 
 /*
-	Submitted by: Micaela Warvi
-	Last modified: 2019-05-01
-	
-	Function: sell_login
-	Expects: nothing
-	Returns: nothing
-	Side effect: Outputs to the screen a login if a
-				 username and password doesn't exist in the
-				 $_POST or $_SESSION array
+Function: admin_login()
+Creates a login form.
+That's it, nothing else.
 */
 
 function admin_login()

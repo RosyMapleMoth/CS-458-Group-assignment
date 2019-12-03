@@ -1,3 +1,7 @@
+<!-- Contactus page
+	 Form is basic, used to send a comment to an e-mail
+	 Rest of logic is in contactus_submit.php -->
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -10,7 +14,7 @@
 		<link href="css/style.css" type="text/css"  rel="stylesheet" />
 
 <script src="https://www.google.com/recaptcha/api.js?render=6LfeNMQUAAAAAAq1ZRT5UBd9TskftWMX4Wvefjif"></script>
-<script>
+<script> <!-- This script portion is used for a Captcha -->
 grecaptcha.ready(function() {
     grecaptcha.execute('6LfeNMQUAAAAAAq1ZRT5UBd9TskftWMX4Wvefjif', {action: 'homepage'}).then(function(token) {
        ...
@@ -64,7 +68,7 @@ grecaptcha.ready(function() {
 				</fieldset>
 			</div>
 		
-			<div class="g-recaptcha" data-sitekey="6LfeNMQUAAAAAAq1ZRT5UBd9TskftWMX4Wvefjif">
+			<div class="g-recaptcha" data-sitekey="6LfeNMQUAAAAAAq1ZRT5UBd9TskftWMX4Wvefjif"> <!-- Also required for Captcha -->
 			</div>      
 			<br/>
 			

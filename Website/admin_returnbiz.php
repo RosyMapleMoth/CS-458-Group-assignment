@@ -1,16 +1,10 @@
 <?php
 
 /*
-	Submitted by: Micaela Warvi
-	Last modified: 2019-05-02
-	
-	Function: get_members
-	Expects: nothing
-	Returns: nothing
-	Depends on: returnbiz_options.php
-	Requires: hsu_conn.php
-	Side effect: Outputs to the screen the list of members
-				 found in the Members returnbiz DB table
+Function: admin_returnbiz()
+Selects all from the Biz_prof table, sorted by city
+Returns in a table form in HTML
+Allows admin to then logout, or return to the "Start" page
 */
 
 function admin_returnbiz()
@@ -22,7 +16,7 @@ function admin_returnbiz()
 	
 	$conn = hsu_conn($username, $password);
      // Connection successful
-    // set up my select statement, and execute it
+    // set up select statement, and execute it
 
 	$returnbiz_query = 'select * from Biz_prof
 						order by city';

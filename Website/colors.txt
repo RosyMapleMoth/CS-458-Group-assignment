@@ -1,3 +1,5 @@
+These are the hex codes for the colors used on the website.
+
 Light blue: 7a99ab
 Dark blue grey: 223031
 Green: 3e5000

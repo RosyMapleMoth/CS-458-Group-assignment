@@ -1,17 +1,9 @@
 <?php
 
 /*
-	Submitted by: Micaela Warvi
-	Last modified: 2019-05-01
-	
-	Function: sell_form
-	Expects: nothing
-	Returns: nothing
-	Depends on: sell_login()
-	Requires: hsu_conn()
-	Side effect: Outputs to the screen a dynamically selected
-				 drop down queried from the titles table
-				 Also provides a number input for desired quantity
+Function: admin_start()
+Is produced after the admin_login() page is loaded
+Let's the admin select what they want to do
 */
 
 function admin_start()

@@ -1,17 +1,9 @@
 <?php
 
 /*
-	Submitted by: Micaela Warvi
-	Last modified: 2019-05-01
-	
-	Function: sell_form
-	Expects: nothing
-	Returns: nothing
-	Depends on: sell_login()
-	Requires: hsu_conn()
-	Side effect: Outputs to the screen a dynamically selected
-				 drop down queried from the titles table
-				 Also provides a number input for desired quantity
+Function: admin_addbiz()
+Produces a form that is used to add a business to the DB
+It's fields are used in the admin_confirmadd page\function
 */
 
 function admin_addbiz()

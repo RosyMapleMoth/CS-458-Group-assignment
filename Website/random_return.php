@@ -1,4 +1,10 @@
 <?php
+/*
+Function: random_return()
+Setup for the random function, and sets up the connection and query
+Switch statement is used to setup the query and what table it pulls from
+During fetching, an if statement is used to differentiate the output and HTML
+*/
 function random_return()
 {
 	// Login is successful, create user\pass variables and place them in $_SESSION
@@ -19,7 +25,8 @@ function random_return()
 		$choice = $_SESSION["choice"];
 		$random_query_str = "";
 	}
-	
+	/* Switch\case statement: uses the "choice" from the drop down menu on random_opt(), and changes the string/query 
+	   dbms_random.value is used to select a sample set, rownum <= 1 is used to select the ONE row */
 	switch ($choice) {
 	case "eatery":
 		$random_query_str = "select * from (select * from Eatery order by dbms_random.value) where rownum <= 1";
@@ -42,6 +49,9 @@ function random_return()
 	oci_execute($random_query);
 			while (oci_fetch($random_query))
 			{
+				/* There might be a better way to do this, but in any case, it works
+				   The if is used to pick from the drop down from random_opt() and produce the result
+				   and the corresponding output in HTML */
 				if ($choice == "eatery") {
 						$current_name = oci_result($random_query, "EAT_ID");
 						$current_add = oci_result($random_query, "STREET_ADD");
@@ -141,9 +151,9 @@ function random_return()
 			<fieldset>
 				
 			<br />
-			<input type="submit" name="random" value="Another please!" />
+			<input type="submit" name="random" value="Another please!" /> <!-- Runs the select all over again -->
 			
-			<input type="submit" name="choose_again" value="Select something else" />
+			<input type="submit" name="choose_again" value="Select something else" /> <!-- Goes back to random_opt() --> 
 			</fieldset>
 		</form>
 	

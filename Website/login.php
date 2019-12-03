@@ -1,3 +1,4 @@
+<!-- Provides links to either the admin.php login or the owner.php login for business owners -->
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 

@@ -1,15 +1,9 @@
 <?php
 
 /*
-	Submitted by: Micaela Warvi
-	Last modified: 2019-05-02
-	
-	Function: add_event
-	Expects: nothing
-	Returns: nothing
-	Side effect: Runs 'insert_new_event' function on custom db
-				 Outputs to the screen the variable information
-				 as a confirmation to the user
+Function: admin_confirmadd
+Grabs information from admin_addbiz
+Inserts info into Biz_prof table using the insert_new_biz procedure
 */
 
 function admin_confirmadd()
@@ -51,6 +45,7 @@ function admin_confirmadd()
 	oci_commit($conn);
 	?>
 	
+	<!-- Feeds back to the user that the new business was submitted -->
 	<br />
 	<form method="post" 
 		  action="<?= htmlentities($_SERVER['PHP_SELF'], ENT_QUOTES) ?>">			  
@@ -77,6 +72,7 @@ function admin_confirmadd()
 					<td><?= $liaison_in ?> </td>
 				</tr>
 			</table>
+			<!-- Admin can either return to the initial "start" page or to logout -->
 			<input type="submit" name="return" value= "Return to selection page" />
 			<input type="submit" name="logout" value= "logout" />	
 		</fieldset>
