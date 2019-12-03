@@ -15,7 +15,7 @@ values (100,'Blondies Food and Drink','A local cheese stake shop in the arcata a
 
 insert into MLG40.Event
 values(2,'Science on Tap Presents: Futurama on Tap', 'Bar, Speeker',
-       'y','y','free','Good news everyone! This month’s installment of Science on Tap will explore the iconic show, Futurama, by Matt Groening and David Cohen, whom also wrote and created The Simpsons, The Tracey Ullman Show, and Disenchantment, just to name a few examples.',
+       'y','y','free','This month’s installment of Science on Tap will explore the iconic show, Futurama, by Matt Groening and David Cohen, whom also wrote and created The Simpsons, The Tracey Ullman Show, and Disenchantment, just to name a few examples.',
        '420 California Ave','Arcata','CA',100);
 
 
